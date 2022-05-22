@@ -45,7 +45,7 @@ export class ApiConfigService {
   private getString(key: string): string {
     const value = this.get(key);
 
-    return value.replace(/\\n/g, '\n');
+    return value?.replace(/\\n/g, '\n');
   }
 
   get nodeEnv(): string {

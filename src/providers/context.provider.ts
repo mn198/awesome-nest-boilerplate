@@ -1,6 +1,5 @@
 import { getValue, setValue } from 'express-ctx';
 
-import type { LanguageCode } from '../constants';
 import type { UserEntity } from '../modules/user/user.entity';
 
 export class ContextProvider {
@@ -29,10 +28,6 @@ export class ContextProvider {
 
   static setLanguage(language: string): void {
     ContextProvider.set(ContextProvider.languageKey, language);
-  }
-
-  static getLanguage(): LanguageCode | undefined {
-    return ContextProvider.get<LanguageCode>(ContextProvider.languageKey);
   }
 
   static getAuthUser(): UserEntity | undefined {

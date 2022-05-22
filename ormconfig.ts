@@ -8,7 +8,7 @@ import { SnakeNamingStrategy } from './src/snake-naming.strategy';
 const configs: TypeOrmModuleOptions & { seeds: string[]; factories: string[] } =
   {
     type: 'postgres',
-    host: process.env.DB_HOST,
+    host: process.env.DB_LOLCAL_HOST,
     port: Number(process.env.DB_PORT),
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
